@@ -1,1 +1,59 @@
 /*  your css code here. If applicable */
+body {
+  background-color: #f8f9fb;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+  width: 80%;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+#verification_heading {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#verification_subtext {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.code-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.code {
+  width: 60px;
+  height: 70px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  border-radius: 5px;
+}
+
+.code:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.note {
+  background-color: #f2f2f2;
+  color: #777;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+}
