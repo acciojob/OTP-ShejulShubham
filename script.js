@@ -1,23 +1,24 @@
-//your JS code here. If required.
 const codes = document.querySelectorAll(".code");
 
-// codes[0].focus();
+// Auto-focus first box
+codes[0].focus();
 
-codes.forEach((code, index)=>{
-	code.addEventListener("input", e=>{
-		if(event.target.value.length === 1 && index < codes.length -1){
-			codes[index+1].focus();
-		}
-	});
+codes.forEach((input, index) => {
+  input.addEventListener("input", (e) => {
+    const value = e.target.value;
+    if (value.length === 1 && index < codes.length - 1) {
+      codes[index + 1].focus();
+    }
+  });
 
-	code.addEventListener("keydown", e=>{
-		if(e.key == "Backspace"){
-			if(index > 0){
-				codes[index-1].focus();
-				e.target.value = "";
-			}else {
-				e.target.value = "";
-			}
-		}
-	})
-})
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace") {
+      if (input.value === "" && index > 0) {
+        codes[index - 1].focus();
+        codes[index - 1].value = "";
+      } else {
+        input.value = "";
+      }
+    }
+  });
+});
